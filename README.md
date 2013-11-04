@@ -1,4 +1,4 @@
 googlesearchbar
 ===============
 
-google search bar
+Google Search Bar
