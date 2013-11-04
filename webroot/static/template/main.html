@@ -1,0 +1,14 @@
+<div class="search-bar" data-ng-class="ctrlClass">
+  <input class="textbox suggest" data-ng-model="backTextBox">
+  <input class="textbox"
+         data-ng-model="textBox"
+         data-ng-focus="toggleBarClass(true)"
+         data-ng-blur ="toggleBarClass(false)"
+         data-ng-keyup="makeRequest()">
+  <div class="result" data-ng-hide="true">
+    <ul>
+    </ul>
+  </div>
+</div>
+
+<div>{{ textBox }}</div>
