@@ -1,0 +1,17 @@
+<!-- google-search-bar.html template -->
+<div class="search-bar" data-ng-class="ctrlClass">
+  <input class="textbox suggest" data-ng-model="filteredItems[0]">
+  <input class="textbox"
+         data-ng-model="textBox"
+         data-ng-keyup="autoComplate()"
+         data-ng-change="makeRequest()">
+  <div class="result" data-ng-hide="chkHidden()">
+    <ul>
+      <li ng-class="itemSelected[$index]"
+          ng-repeat="item in (filteredItems = (result | filter:textBox))"
+          ng-mouseenter="setSelected($index)"
+          ng-click="chooseItem($index)"
+          ng-bind-html="makeUp(item)"></li>
+    </ul>
+  </div>
+</div>
